@@ -1,21 +1,35 @@
-﻿const sorularDiv = document.getElementById("questions");
+const sorularDiv = document.getElementById("questions");
 
 if(sorularDiv){
 
-  for(let i=1; i<=20; i++){
+  const sorular = [
+  "Günlük ulaşımınızda toplu taşıma kullanıyor musunuz?",
+  "Evde gereksiz ışıkları kapatır mısınız?",
+  "Plastik kullanımını azaltmaya çalışıyor musunuz?",
+  "Kısa mesafelerde yürümeyi tercih eder misiniz?",
+  "Geri dönüşüm yapıyor musunuz?",
+  "Enerji tasarruflu ampul kullanıyor musunuz?",
+  "Su tasarrufuna dikkat ediyor musunuz?",
+  "Sık sık uçak yolculuğu yapar mısınız?",
+  "Tek kullanımlık ürünlerden kaçınır mısınız?",
+  "Doğayı korumak için çevre etkinliklerine katılır mısınız?"
+];
 
-    sorularDiv.innerHTML += `
-      <div class="question">
-        <p>${i}. Günlük yaşamınızda çevre dostu davranıyor musunuz?</p>
+sorular.forEach((soru, index) => {
 
-        <select>
-          <option value="1">Evet</option>
-          <option value="3">Bazen</option>
-          <option value="5">Hayır</option>
-        </select>
-      </div>
-    `;
-  }
+  sorularDiv.innerHTML += `
+    <div class="question">
+      <p>${index + 1}. ${soru}</p>
+
+      <select>
+        <option value="1">Evet</option>
+        <option value="3">Bazen</option>
+        <option value="5">Hayır</option>
+      </select>
+    </div>
+  `;
+
+});
 }
 
 function hesapla(){
