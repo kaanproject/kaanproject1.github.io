@@ -191,3 +191,103 @@ footer{
     width:95%;
   }
 }
+/* ANİMASYONLU SORU GEÇİŞİ */
+
+.question-box{
+    text-align: center;
+    animation: fadeSlide 0.5s ease;
+}
+
+@keyframes fadeSlide{
+
+    from{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* BUTON ANİMASYONU */
+
+button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background: darkgreen;
+}
+
+/* SONUÇ KUTUSU ANİMASYONU */
+
+#sonuc{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    animation: sonucAnimasyon 0.7s ease;
+}
+
+@keyframes sonucAnimasyon{
+
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* SELECT ANİMASYONU */
+
+select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+select:focus{
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 10px rgba(0,128,0,0.3);
+}
+
+/* SAYFA GİRİŞ ANİMASYONU */
+
+.quiz-container{
+    animation: sayfaAcilis 0.8s ease;
+}
+
+@keyframes sayfaAcilis{
+
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
