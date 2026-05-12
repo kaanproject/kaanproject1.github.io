@@ -1,11 +1,65 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karbon Ayak İzi</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .quiz-container{
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .question-box{
+      text-align: center;
+    }
+
+    .question-box h2{
+      margin-bottom: 25px;
+    }
+
+    select{
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button{
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      background: green;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover{
+      background: darkgreen;
+    }
+
+    #sonuc{
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f2f2f2;
+    }
+
+  </style>
+
 </head>
+
 <body>
 
 <header>
@@ -22,25 +76,241 @@
 
 <div class="quiz-container">
 
-  <form id="quizForm">
-
-    <div id="questions"></div>
-
-    <button type="button" onclick="hesapla()">Sonucu Hesapla</button>
-
-  </form>
+  <div id="questions"></div>
 
   <div id="sonuc"></div>
 
 </div>
 
-<script src="script.js"></script>
+<script>
 
-</body>
+const sorular = [
 
-</section>
+  {
+    soru: "Günlük ulaşımınızda toplu taşıma kullanıyor musunuz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Evde gereksiz ışıkları kapatır mısınız?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Plastik kullanımını azaltmaya çalışıyor musunuz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Kısa mesafelerde yürümeyi tercih eder misiniz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Geri dönüşüm yapıyor musunuz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Enerji tasarruflu ampul kullanıyor musunuz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Su tasarrufuna dikkat ediyor musunuz?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Sık sık uçak yolculuğu yapar mısınız?",
+    cevaplar: [
+      { text: "Evet", value: 5 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 1 }
+    ]
+  },
+
+  {
+    soru: "Tek kullanımlık ürünlerden kaçınır mısınız?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  },
+
+  {
+    soru: "Doğayı korumak için çevre etkinliklerine katılır mısınız?",
+    cevaplar: [
+      { text: "Evet", value: 1 },
+      { text: "Bazen", value: 3 },
+      { text: "Hayır", value: 5 }
+    ]
+  }
+
+];
+
+let soruIndex = 0;
+let toplamPuan = 0;
+
+const questionsDiv = document.getElementById("questions");
+
+soruyuGoster();
+
+function soruyuGoster(){
+
+  if(soruIndex < sorular.length){
+
+    const soru = sorular[soruIndex];
+
+    let optionsHTML = "";
+
+    soru.cevaplar.forEach(cevap => {
+
+      optionsHTML += `
+        <option value="${cevap.value}">
+          ${cevap.text}
+        </option>
+      `;
+
+    });
+
+    questionsDiv.innerHTML = `
+
+      <div class="question-box">
+
+        <h2>${soruIndex + 1}. ${soru.soru}</h2>
+
+        <select id="cevap">
+          ${optionsHTML}
+        </select>
+
+        <br>
+
+        <button onclick="sonrakiSoru()">
+          ${soruIndex == sorular.length - 1 ? "Sonucu Göster" : "Sonraki Soru"}
+        </button>
+
+      </div>
+
+    `;
+
+  }
+
+  else{
+
+    sonucuGoster();
+
+  }
+
+}
+
+function sonrakiSoru(){
+
+  const secim = document.getElementById("cevap");
+
+  toplamPuan += Number(secim.value);
+
+  soruIndex++;
+
+  soruyuGoster();
+
+}
+
+function sonucuGoster(){
+
+  let sonuc = "";
+  let oneriler = "";
+
+  if(toplamPuan <= 20){
+
+    sonuc = "Karbon ayak iziniz çok düşük 🌱";
+
+    oneriler = `
+      <ul>
+        <li>Çevre dostu alışkanlıklarınızı sürdürün.</li>
+        <li>Toplu taşımayı tercih etmeye devam edin.</li>
+        <li>Geri dönüşüm yapmayı sürdürün.</li>
+      </ul>
+    `;
+  }
+
+  else if(toplamPuan <= 35){
+
+    sonuc = "Karbon ayak iziniz orta seviyede 🌍";
+
+    oneriler = `
+      <ul>
+        <li>Elektrik ve su tüketimini azaltabilirsiniz.</li>
+        <li>Plastik kullanımını azaltmaya çalışın.</li>
+        <li>Daha fazla yürüyüş yapabilirsiniz.</li>
+      </ul>
+    `;
+  }
+
+  else{
+
+    sonuc = "Karbon ayak iziniz yüksek ⚠️";
+
+    oneriler = `
+      <ul>
+        <li>Özel araç kullanımını azaltın.</li>
+        <li>Enerji tasarruflu ürünler kullanın.</li>
+        <li>Tek kullanımlık ürünlerden kaçının.</li>
+        <li>Uçak yolculuklarını azaltın.</li>
+      </ul>
+    `;
+  }
+
+  questionsDiv.innerHTML = "";
+
+  document.getElementById("sonuc").innerHTML = `
+
+    <h2>${sonuc}</h2>
+
+    <p><strong>Toplam Puan:</strong> ${toplamPuan}</p>
+
+    <h3>Öneriler</h3>
+
+    ${oneriler}
+
+  `;
+
+}
+
+</script>
 
 <footer>
   <p>© 2026 Karbon Ayak İzi Projesi</p>
 </footer>
+
+</body>
 </html>
