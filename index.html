@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untitled Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { margin: 0 !important; }
+    }
+  </style>
+</head>
+<body style="margin:0">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  @import url('');
+  * { font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  .tracking-hero { letter-spacing: -0.28px; }
+  .tracking-body { letter-spacing: -0.374px; }
+  .tracking-link { letter-spacing: -0.224px; }
+  .line-hero { line-height: 1.07; }
+  .line-card { line-height: 1.14; }
+  .pill-btn { border-radius: 980px; }
+  .card-shadow { box-shadow: rgba(0,0,0,0.22) 3px 5px 30px 0px; }
+  .nav-glass { backdrop-filter: saturate(180%) blur(20px); background: rgba(0,0,0,0.82); }
+  .divider-dashes { border-top: 2px dashed #d1c7b0; }
+  .amber-shadow { box-shadow: 0 4px 32px 0 rgba(180,120,40,0.13); }
+</style>
+
+<!-- NAV -->
+<nav class="nav-glass sticky top-0 z-50 w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-12">
+    <div class="flex items-center gap-2">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#4ade80" stroke-width="2"/><path d="M7 13c1-3 3-5 4-5s3 2 4 5" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/><path d="M11 8v-2" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="text-white font-semibold text-sm tracking-tight">EcoTrace</span>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#how" class="text-white/70 text-xs hover:text-white transition-colors tracking-link">How it works</a>
+      <a href="#features" class="text-white/70 text-xs hover:text-white transition-colors tracking-link">Features</a>
+      <a href="#pricing" class="text-white/70 text-xs hover:text-white transition-colors tracking-link">Pricing</a>
+      <a href="#waitlist" class="bg-emerald-500 hover:bg-emerald-400 text-white text-xs font-medium px-4 py-1.5 rounded-full transition-colors">Join Waitlist</a>
+    </div>
+    <button class="md:hidden text-white/80 hover:text-white">
+      <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-black w-full pt-24 pb-20 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
+      <span class="text-emerald-400 text-xs tracking-link">Now in early access — free for developers</span>
+    </div>
+    <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-semibold line-hero tracking-hero mb-6">
+      Your website has<br class="hidden sm:block"/>
+      <span class="text-emerald-400"> a carbon problem.</span><br/>
+      We measure it.
+    </h1>
+    <p class="text-white/60 text-base sm:text-lg max-w-xl mx-auto tracking-body mb-10" style="line-height:1.47">
+      EcoTrace scans any URL, calculates its real carbon footprint, then gives you an AI-powered action plan to cut emissions — line by line.
+    </p>
+    <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mb-5">
+      <input type="email" placeholder="you@yoursite.com" class="flex-1 bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/30 text-sm focus:outline-none focus:border-emerald-500 transition-colors tracking-body" style="background:rgba(255,255,255,0.06)"/>
+      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 text-white font-medium text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap">Get Early Access</button>
+    </form>
+    <p class="text-white/25 text-xs tracking-link">No credit card. No spam. Cancel whenever.</p>
+
+    <!-- Hero visual -->
+    <div class="mt-16 relative max-w-2xl mx-auto">
+      <div class="card-shadow rounded-2xl bg-[#111111] border border-white/8 overflow-hidden">
+        <div class="flex items-center gap-1.5 px-4 py-3 border-b border-white/8">
+          <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500/70"></span>
+          <span class="ml-3 text-white/25 text-xs tracking-link">ecotrace.ai/scan</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-white/50 text-xs tracking-link">yourwebsite.com</span>
+            <span class="bg-red-500/15 text-red-400 text-xs px-2.5 py-1 rounded-full">D — High Emissions</span>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="bg-white/4 rounded-xl p-3 text-center border border-white/6">
+              <div class="text-2xl font-semibold text-white line-card">4.8g</div>
+              <div class="text-white/35 text-xs mt-1">CO₂ / visit</div>
+            </div>
+            <div class="bg-white/4 rounded-xl p-3 text-center border border-white/6">
+              <div class="text-2xl font-semibold text-white line-card">63%</div>
+              <div class="text-white/35 text-xs mt-1">vs avg site</div>
+            </div>
+            <div class="bg-white/4 rounded-xl p-3 text-center border border-white/6">
+              <div class="text-2xl font-semibold text-white line-card">2.1t</div>
+              <div class="text-white/35 text-xs mt-1">CO₂/yr est.</div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="text-white/40 text-xs mb-2 tracking-link uppercase">AI Suggestions</div>
+            <div class="flex items-start gap-3 bg-emerald-500/8 rounded-lg p-3 border border-emerald-500/15">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0"><path d="M3 8l3.5 3.5L13 4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-white/70 text-xs tracking-body leading-relaxed">Switch to a green hosting provider — saves ~1.2t CO₂/yr</span>
+            </div>
+            <div class="flex items-start gap-3 bg-emerald-500/8 rounded-lg p-3 border border-emerald-500/15">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0"><path d="M3 8l3.5 3.5L13 4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-white/70 text-xs tracking-body leading-relaxed">Compress 14 unoptimized images — saves 0.8g per visit</span>
+            </div>
+            <div class="flex items-start gap-3 bg-white/4 rounded-lg p-3 border border-white/6 opacity-50">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#9ca3af" stroke-width="1.4"/><path d="M8 6v4M6 8h4" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <span class="text-white/40 text-xs tracking-body">5 more suggestions — unlock with free account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF STRIP -->
+<section class="bg-[#f5f5f7] w-full py-8 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-[#1d1d1f]/40 text-xs tracking-link mb-5 uppercase">Trusted by indie builders & developers at</p>
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+      <span class="text-[#1d1d1f]/30 font-semibold text-sm tracking-tight">Vercel</span>
+      <span class="text-[#1d1d1f]/30 font-semibold text-sm tracking-tight">Netlify</span>
+      <span class="text-[#1d1d1f]/30 font-semibold text-sm tracking-tight">Supabase</span>
+      <span class="text-[#1d1d1f]/30 font-semibold text-sm tracking-tight">Railway</span>
+      <span class="text-[#1d1d1f]/30 font-semibold text-sm tracking-tight">PlanetScale</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="bg-[#f5f5f7] w-full py-24 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-[#1d1d1f] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-hero line-hero mb-4">How it works</h2>
+      <p class="text-[#1d1d1f]/60 text-base max-w-md mx-auto tracking-body" style="line-height:1.47">Three steps from ignorance to action. Takes under 60 seconds.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-10">
+      <!-- Step 1 -->
+      <div class="relative bg-white rounded-2xl p-7 card-shadow flex flex-col">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 border border-emerald-100">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3z" stroke="#10b981" stroke-width="1.6"/><path d="M10 7v3l2 2" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="text-[#1d1d1f]/20 text-xs font-semibold tracking-link mb-2">01</div>
+        <h3 class="text-[#1d1d1f] text-lg font-semibold line-card mb-2">Paste your URL</h3>
+        <p class="text-[#1d1d1f]/55 text-sm tracking-body" style="line-height:1.47">Drop in any website address. We crawl it, analyse assets, hosting, scripts, and data transfer in real time.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative bg-white rounded-2xl p-7 card-shadow flex flex-col sm:mt-6">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 border border-emerald-100">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="#10b981" stroke-width="1.6"/><path d="M7 10h6M7 13h4" stroke="#10b981" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="text-[#1d1d1f]/20 text-xs font-semibold tracking-link mb-2">02</div>
+        <h3 class="text-[#1d1d1f] text-lg font-semibold line-card mb-2">Get your score</h3>
+        <p class="text-[#1d1d1f]/55 text-sm tracking-body" style="line-height:1.47">Receive a carbon rating from A–F with grams of CO₂ per visit, yearly projections, and how you compare to similar sites.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="relative bg-white rounded-2xl p-7 card-shadow flex flex-col sm:mt-12">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 border border-emerald-100">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15l4-5 3 2 3-6" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="5" r="2" stroke="#10b981" stroke-width="1.4"/></svg>
+        </div>
+        <div class="text-[#1d1d1f]/20 text-xs font-semibold tracking-link mb-2">03</div>
+        <h3 class="text-[#1d1d1f] text-lg font-semibold line-card mb-2">Act on AI fixes</h3>
+        <p class="text-[#1d1d1f]/55 text-sm tracking-body" style="line-height:1.47">Our AI generates a prioritised fix list: switch hosts, compress assets, remove scripts — with estimated savings for each.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="bg-black w-full py-24 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-hero line-hero mb-4">Built for builders</h2>
+      <p class="text-white/50 text-base max-w-md mx-auto tracking-body" style="line-height:1.47">Developer-first tooling. Designed to fit into how you already ship.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="bg-[#111] border border-white/8 rounded-2xl p-7 flex gap-5 items-start">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 6l4 4-4 4M10 14h6" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base line-card mb-1.5">API + CI/CD Integration</h3>
+          <p class="text-white/45 text-sm tracking-body" style="line-height:1.47">Plug into your deploy pipeline. Get carbon scores on every PR, with fail thresholds you define.</p>
+        </div>
+      </div>
+      <div class="bg-[#111] border border-white/8 rounded-2xl p-7 flex gap-5 items-start">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#4ade80" stroke-width="1.6"/><path d="M10 7v3l2 1.5" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base line-card mb-1.5">Real-time Monitoring</h3>
+          <p class="text-white/45 text-sm tracking-body" style="line-height:1.47">Track carbon trends over time as you ship. See which deploys reduced emissions and which hurt your score.</p>
+        </div>
+      </div>
+      <div class="bg-[#111] border border-white/8 rounded-2xl p-7 flex gap-5 items-start">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l4-4 3 3 3-3 4 4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base line-card mb-1.5">AI Fix Prioritisation</h3>
+          <p class="text-white/45 text-sm tracking-body" style="line-height:1.47">Not all fixes are equal. Our AI ranks them by impact-vs-effort so you know exactly where to start.</p>
+        </div>
+      </div>
+      <div class="bg-[#111] border border-white/8 rounded-2xl p-7 flex gap-5 items-start">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="#4ade80" stroke-width="1.6"/><path d="M3 9h14" stroke="#4ade80" stroke-width="1.4"/><circle cx="7" cy="13" r="1" fill="#4ade80"/></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base line-card mb-1.5">Shareable Carbon Badge</h3>
+          <p class="text-white/45 text-sm tracking-body" style="line-height:1.47">Embed a live carbon badge on your site. Show visitors your score and commitment to a greener web.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Stat bar -->
+    <div class="mt-10 bg-[#111] border border-white/8 rounded-2xl p-7 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:divide-x sm:divide-white/8 text-center">
+      <div>
+        <div class="text-3xl font-semibold text-white tracking-hero line-hero">2.5%</div>
+        <div class="text-white/35 text-sm mt-1 tracking-link">of global electricity consumed by the internet</div>
+      </div>
+      <div class="sm:pl-6">
+        <div class="text-3xl font-semibold text-emerald-400 tracking-hero line-hero">~0.5g</div>
+        <div class="text-white/35 text-sm mt-1 tracking-link">CO₂ produced by an average web page load</div>
+      </div>
+      <div class="sm:pl-6">
+        <div class="text-3xl font-semibold text-white tracking-hero line-hero">10×</div>
+        <div class="text-white/35 text-sm mt-1 tracking-link">reduction possible with the right optimisations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-[#f5f5f7] w-full py-20 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-[#1d1d1f] text-3xl sm:text-4xl font-semibold tracking-hero line-hero text-center mb-12">What early testers say</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-6 card-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+        </div>
+        <p class="text-[#1d1d1f]/70 text-sm tracking-body mb-5" style="line-height:1.6">"EcoTrace found issues I didn't even know were worth fixing. Swapped our CDN and trimmed 60% off our carbon score in a week."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-semibold text-xs">MR</div>
+          <div>
+            <div class="text-[#1d1d1f] text-xs font-semibold">Marcus R.</div>
+            <div class="text-[#1d1d1f]/40 text-xs tracking-link">Indie founder, SaaS</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 card-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+        </div>
+        <p class="text-[#1d1d1f]/70 text-sm tracking-body mb-5" style="line-height:1.6">"The CI integration is a game-changer. We made sustainability a first-class metric. It now blocks deploys that regress our score."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-semibold text-xs">SL</div>
+          <div>
+            <div class="text-[#1d1d1f] text-xs font-semibold">Sofia L.</div>
+            <div class="text-[#1d1d1f]/40 text-xs tracking-link">Lead Dev, open-source tool</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 card-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#10b981" class="shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M7 1l1.545 3.09L12 4.854l-2.5 2.465.59 3.49L7 9.09l-3.09 1.718.59-3.49L2 4.854l3.455-.764L7 1z"/></svg>
+        </div>
+        <p class="text-[#1d1d1f]/70 text-sm tracking-body mb-5" style="line-height:1.6">"Simple, fast, honest. No fluff. Just tells you what's wrong and how to fix it. Every developer should run their site through this."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-semibold text-xs">JK</div>
+          <div>
+            <div class="text-[#1d1d1f] text-xs font-semibold">James K.</div>
+            <div class="text-[#1d1d1f]/40 text-xs tracking-link">Freelance dev</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CTA -->
+<section id="waitlist" class="bg-black w-full py-24 px-4">
+  <div class="max-w-xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 mb-6 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5">
+      <span class="text-emerald-400 text-xs tracking-link">Free during early access</span>
+    </div>
+    <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-hero line-hero mb-5">Make your site<br/>greener, today.</h2>
+    <p class="text-white/50 text-base tracking-body mb-8" style="line-height:1.47">Join 1,200+ developers and founders already on the waitlist. Early access includes full API access and unlimited scans.</p>
+    <form class="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+      <input type="email" placeholder="Enter your email address" class="flex-1 border border-white/15 rounded-lg px-4 py-3.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-emerald-500 transition-colors tracking-body" style="background:rgba(255,255,255,0.06)"/>
+      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-white font-medium text-sm px-7 py-3.5 rounded-lg transition-colors whitespace-nowrap w-full sm:w-auto">Join the Waitlist</button>
+    </form>
+    <p class="text-white/20 text-xs tracking-link">We will never sell your data. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#111] w-full py-10 px-4 border-t border-white/6">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
+    <div class="flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#4ade80" stroke-width="2"/><path d="M7 13c1-3 3-5 4-5s3 2 4 5" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/><path d="M11 8v-2" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="text-white/70 text-sm font-medium">EcoTrace</span>
+      <span class="text-white/20 text-xs ml-2 tracking-link">© 2026</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="#" class="text-white/35 text-xs hover:text-white/70 transition-colors tracking-link">Privacy</a>
+      <a href="#" class="text-white/35 text-xs hover:text-white/70 transition-colors tracking-link">Terms</a>
+      <a href="#" class="text-white/35 text-xs hover:text-white/70 transition-colors tracking-link">Blog</a>
+      <a href="mailto:hello@ecotrace.ai" class="text-white/35 text-xs hover:text-white/70 transition-colors tracking-link">Contact</a>
+    </div>
+    <p class="text-white/20 text-xs tracking-link text-center sm:text-right">Built for a greener internet 🌱</p>
+  </div>
+</footer>
+</body>
+</html>
